@@ -12,5 +12,18 @@ public class MovieDatabase {
         movies.add(new Movie("Friday", 5));
         return movies;
     }
+    public void addMovie(Movie movie) {
+        movies.add(movie);
+    }
+    public ArrayList<Movie> searchMovie(String keyword) {
+        ArrayList<Movie> result = new ArrayList<>();
+        for (Movie movie : movies) {
+            if (movie.getTitle().toLowerCase().contains(keyword.toLowerCase())) {
+                result.add(movie);
+            }
+        }
+        return result;
+    }
+
 
 }
