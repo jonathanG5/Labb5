@@ -24,6 +24,15 @@ public class MovieDatabase {
         }
         return result;
     }
+    public ArrayList<Movie> searchRating(int score) {
+        ArrayList<Movie> result = new ArrayList<>();
+        for (Movie movie : movies) {
+            if (movie.getRating() >= score) {
+                result.add(movie);
+            }
+        }
+        return result;
+    }
 
 
 }
