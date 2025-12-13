@@ -4,6 +4,7 @@ import Movie.Movie;
 import MovieDatabase.MovieDatabase;
 
 import java.lang.classfile.instruction.SwitchCase;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Meny {
@@ -35,6 +36,14 @@ public class Meny {
 
     public void searchtitle()
     {
+        System.out.print("Enter keyword: ");
+        String keyword = scan.nextLine();
+
+        db.searchMovie(keyword);
+        ArrayList<Movie> movies = db.getMovies();
+        for (Movie movie : movies) {
+            System.out.println();
+        }
 
     }
 
