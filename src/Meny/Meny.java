@@ -26,18 +26,24 @@ public class Meny {
             function = scan.nextInt();
 
             switch(function) {
-                case 1 -> ;
+                case 1 -> searchtitle();
                 case 2 -> searchrating();
                 case 3 -> addMovie();
-                case 4 -> ;
             }
         }
+    }
+
+    public void searchtitle()
+    {
+
     }
 
     public void searchrating()
     {
         System.out.println("Enter minumum rating of movie (1-5)");
         int minumum = scan.nextInt();
+        scan.nextLine();
+
         db.score(searchrating()) = minumum;
 
 
