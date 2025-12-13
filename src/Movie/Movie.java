@@ -15,7 +15,7 @@ public class Movie {
         return rating;
     }
 public String toString(){
-        return " " + rating;
+        return "Title: " + title + " Rating: " + rating + "/5 ";
 }
 
 }
