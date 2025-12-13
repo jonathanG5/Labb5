@@ -40,8 +40,8 @@ public class Meny {
         System.out.print("Enter keyword: ");
         String keyword = scan.nextLine();
 
-        db.searchMovie(keyword);
-        ArrayList<Movie> movies = db.getMovies();
+        String input = db.searchMovie(keyword);
+
         for (Movie movie : movies) {
             System.out.println(movie);
         }

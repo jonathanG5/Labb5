@@ -14,6 +14,8 @@ public class Movie {
     public int getRating() {
         return rating;
     }
+
+    @Override
 public String toString(){
         return "Title: " + title + " Rating: " + rating + "/5 ";
 }
