@@ -14,6 +14,8 @@ public class Movie {
     public int getRating() {
         return rating;
     }
-
+public String toString(){
+        return " " + rating;
+}
 
 }

@@ -25,6 +25,7 @@ public class Meny {
             System.out.println("3.Add Movie");
             System.out.println("4.Close Program");
             function = scan.nextInt();
+            scan.nextLine();
 
             switch(function) {
                 case 1 -> searchtitle();
@@ -64,6 +65,7 @@ public class Meny {
 
         System.out.println("Review score (1-5): ");
         int rating = scan.nextInt();
+        scan.nextLine();
         db.addMovie(new Movie(title,rating));
     }
 
