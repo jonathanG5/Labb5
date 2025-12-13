@@ -42,9 +42,8 @@ public class Meny {
         db.searchMovie(keyword);
         ArrayList<Movie> movies = db.getMovies();
         for (Movie movie : movies) {
-            System.out.println();
+            System.out.println(movie);
         }
-
     }
 
     public void searchrating()
@@ -53,7 +52,7 @@ public class Meny {
         int minumum = scan.nextInt();
         scan.nextLine();
 
-        db.score(searchrating()) = minumum;
+
 
 
     }
