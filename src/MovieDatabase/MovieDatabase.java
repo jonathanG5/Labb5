@@ -33,6 +33,4 @@ public class MovieDatabase {
         }
         return result;
     }
-
-
 }

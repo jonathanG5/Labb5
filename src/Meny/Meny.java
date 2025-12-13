@@ -35,19 +35,19 @@ public class Meny {
         }
     }
 
-    public void searchtitle()
+    private void searchtitle()
     {
         System.out.print("Enter keyword: ");
         String keyword = scan.nextLine();
 
-        String input = db.searchMovie(keyword);
+        ArrayList<Movie> movies = db.searchMovie(keyword);
 
         for (Movie movie : movies) {
-            System.out.println(movie);
+            System.out.println(movies);
         }
     }
 
-    public void searchrating()
+    private void searchrating()
     {
         System.out.println("Enter minumum rating of movie (1-5)");
         int minumum = scan.nextInt();
@@ -58,7 +58,7 @@ public class Meny {
 
     }
 
-    public void addMovie()
+    private void addMovie()
     {
         System.out.println("Title: ");
         String title = scan.nextLine();
