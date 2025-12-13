@@ -6,6 +6,6 @@ public class Main {
     public static void main(String[] args) {
         MovieDatabase Movies = new MovieDatabase();
         Meny meny = new Meny(Movies);
-        Meny.start();
+        meny.start();
         }
     }

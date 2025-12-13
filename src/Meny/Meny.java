@@ -15,7 +15,7 @@ public class Meny {
         this.db = db;
     }
 
-    public static void start()
+    public void start()
     {
         int function = 0;
         while(function != 4) {
