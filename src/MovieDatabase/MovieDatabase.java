@@ -11,10 +11,11 @@ public class MovieDatabase {
         movies.add(new Movie("White chicks", 5));
         movies.add(new Movie("Friday", 5));
     }
+
     public List<Movie> getMovies(){
         return movies;
     }
-    public void addMovie(Movie movie) {
+    public void addMovie(Movie movie ) {
         movies.add(movie);
     }
     public ArrayList<Movie> searchMovie(String keyword) {

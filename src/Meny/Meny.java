@@ -7,6 +7,7 @@ import java.lang.classfile.instruction.SwitchCase;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class Meny {
     private MovieDatabase database;
     private Scanner scan = new Scanner(System.in);
@@ -66,7 +67,6 @@ public class Meny {
 
         System.out.println("Review score (1-5): ");
         int rating = scan.nextInt();
-        scan.nextLine();
         database.addMovie(new Movie(title,rating));
     }
 

@@ -1,6 +1,5 @@
 package Movie;
 
-import Meny.Meny;
 
 public class Movie {
     private String title;

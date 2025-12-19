@@ -1,5 +1,4 @@
 import Meny.Meny;
-import Movie.Movie;
 import MovieDatabase.MovieDatabase;
 
 public class Main {
