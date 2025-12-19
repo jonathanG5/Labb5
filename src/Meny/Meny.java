@@ -69,6 +69,7 @@ public class Meny {
         System.out.println("Review score (1-5): ");
         int rating = scan.nextInt();
         database.addMovie(new Movie(title,rating));
+
     }
 
 
