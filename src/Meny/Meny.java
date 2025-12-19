@@ -3,7 +3,7 @@ package Meny;
 import Movie.Movie;
 import MovieDatabase.MovieDatabase;
 
-import java.lang.classfile.instruction.SwitchCase;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -52,11 +52,12 @@ public class Meny {
     private void searchrating()
     {
         System.out.println("Enter minumum rating of movie (1-5)");
-        int minumum = scan.nextInt();
-        scan.nextLine();
-
-
-
+        int score = scan.nextInt();
+        ArrayList<Movie> result = database.searchRating(score);
+        for (Movie movie : result)
+        {
+            System.out.println(movie.toString());
+        }
 
     }
 
