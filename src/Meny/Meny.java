@@ -11,7 +11,7 @@ public class Meny {
     private MovieDatabase database;
     private Scanner scan = new Scanner(System.in);
 
-    public Meny(MovieDatabase db) {
+    public Meny(MovieDatabase database) {
         this.database = database;
     }
 
