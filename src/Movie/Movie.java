@@ -1,5 +1,7 @@
 package Movie;
 
+import Meny.Meny;
+
 public class Movie {
     private String title;
     private int rating;
@@ -16,8 +18,8 @@ public class Movie {
     }
 
     @Override
-public String toString(){
+    public String toString(){
         return "Title: " + title + " Rating: " + rating + "/5 ";
-}
+    }
 
 }

@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Meny {
-    private MovieDatabase db;
+    private MovieDatabase database;
     private Scanner scan = new Scanner(System.in);
 
     public Meny(MovieDatabase db) {
-        this.db = db;
+        this.database = database;
     }
 
     public void start()
@@ -40,10 +40,11 @@ public class Meny {
         System.out.print("Enter keyword: ");
         String keyword = scan.nextLine();
 
-        ArrayList<Movie> movies = db.searchMovie(keyword);
+        ArrayList<Movie> movies = database.searchMovie(keyword);
 
-        for (Movie movie : movies) {
-            System.out.println(movies);
+        for (Movie movie : movies)
+        {
+            System.out.println(movie.toString());
         }
     }
 
@@ -66,7 +67,7 @@ public class Meny {
         System.out.println("Review score (1-5): ");
         int rating = scan.nextInt();
         scan.nextLine();
-        db.addMovie(new Movie(title,rating));
+        database.addMovie(new Movie(title,rating));
     }
 
 
