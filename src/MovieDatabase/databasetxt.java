@@ -16,7 +16,7 @@ public class databasetxt {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace(); // fångar felet, pogrammet kraschar inte
         }
     }
 
@@ -25,7 +25,7 @@ public class databasetxt {
 
         File file = new File("movies.txt");
         if (!file.exists()) {
-            return movies; // om filen inte finns än
+            return movies; // om filen inte finns än, kommer tillbaka med tom lista
         }
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
@@ -36,12 +36,11 @@ public class databasetxt {
 
                 String title = parts[0];
                 int rating = Integer.parseInt(parts[1]);
-
                 movies.add(new Movie(title, rating));
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace(); //fångar felet, pogrammet kraschar inte
         }
 
         return movies;
