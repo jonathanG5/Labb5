@@ -6,7 +6,10 @@ import java.util.ArrayList;
 
 public class databasetxt {
 
-    // SKRIVER till movies.txt
+    /**
+     *
+     * @param movies
+     */
     public static void saveMovies(ArrayList<Movie> movies) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("movies.txt"))) {
 

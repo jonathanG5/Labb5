@@ -10,15 +10,25 @@ import java.util.Scanner;
 import MovieDatabase.databasetxt;
 
 
-
+/**
+ * Den visar en meny där användaren kan söka filmer, lägga till filmer
+ * och avsluta programmet.
+ */
 public class Meny {
     private MovieDatabase database;
     private Scanner scan = new Scanner(System.in);
 
+    /**
+     * Referens till databasen som innehåller alla filmer
+     * @param database
+     */
     public Meny(MovieDatabase database) {
         this.database = database;
     }
 
+    /**
+     * Startar menyloopen och visar val tills användaren väljer att avsluta programmet.
+     */
     public void start()
     {
         int function = 0;
@@ -42,6 +52,10 @@ public class Meny {
         }
     }
 
+    /**
+     * Söker efter filmer där titeln innehåller ett angivet nyckelord.
+     * Om inget nyckelord skrivs visas ett felmeddelande.
+     */
     private void searchtitle()// alla filmer kommer upp
     {
         System.out.print("Enter keyword: ");
@@ -62,6 +76,10 @@ public class Meny {
         }
     }
 
+    /**
+     * Söker efter filmer som har ett betyg som är lika med eller
+     * högre än det betyg användaren anger.
+     */
     private void searchrating()
     {
         System.out.println("Enter minumum rating of movie (1-5)");
@@ -74,6 +92,9 @@ public class Meny {
 
     }
 
+    /**
+     * Låter användaren lägga till en ny film som sparas i text filen.
+     */
     private void addMovie()
     {
         String title = "";
@@ -88,6 +109,4 @@ public class Meny {
         databasetxt.saveMovies(database.getMovies());
 
     }
-
-
 }
