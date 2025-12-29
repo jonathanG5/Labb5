@@ -1,24 +1,22 @@
 package MovieDatabase;
 
 import Movie.Movie;
-
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MovieDatabase {
     private ArrayList<Movie> movies = new ArrayList<>();
     public MovieDatabase() {
-        movies.add(new Movie("Training day", 5));
-        movies.add(new Movie("Interstellar", 4));
-        movies.add(new Movie("Friday", 3));
+        movies = databasetxt.loadMovies();
     }
-    public void addMovie(Movie movie ) {
+    public void addMovie (Movie movie) {
         movies.add(movie);
     }
+
+    public ArrayList<Movie> getMovies() {
+        return movies;
+    }
+    
     public ArrayList<Movie> searchMovie(String keyword) {
         ArrayList<Movie> result = new ArrayList<>();
         for (Movie movie : movies) {

@@ -1,0 +1,11 @@
+Shawshank redemption;4
+Seven;4
+Fight club;4
+Avatar;4
+Sinners;4
+Creed;4
+Training day;5
+Interstellar;4
+Friday;3
+F1;4
+Next friday;3

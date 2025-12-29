@@ -7,6 +7,9 @@ import MovieDatabase.MovieDatabase;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import MovieDatabase.databasetxt;
+
+
 
 public class Meny {
     private MovieDatabase database;
@@ -40,7 +43,6 @@ public class Meny {
     {
         System.out.print("Enter keyword: ");
         String keyword = scan.nextLine();
-
         ArrayList<Movie> movies = database.searchMovie(keyword);
 
         for (Movie movie : movies)
@@ -69,6 +71,7 @@ public class Meny {
         System.out.println("Review score (1-5): ");
         int rating = scan.nextInt();
         database.addMovie(new Movie(title,rating));
+        databasetxt.saveMovies(database.getMovies());
 
     }
 
