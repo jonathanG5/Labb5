@@ -59,6 +59,7 @@ public class Meny {
             for (Movie movie : movies) {
                 System.out.println(movie);
             }
+        }
     }
 
     private void searchrating()
