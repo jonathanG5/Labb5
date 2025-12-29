@@ -48,10 +48,17 @@ public class Meny {
         String keyword = scan.nextLine();
         ArrayList<Movie> movies = database.searchMovie(keyword);
 
-        for (Movie movie : movies)
-        {
-            System.out.println(movie.toString());
+        if (keyword.isEmpty()) {
+            System.out.println("Du skrev inget. Försök igen.");
+            return;
         }
+
+        if (movies.isEmpty()) {
+            System.out.println("Inga filmer hittades.");
+        } else {
+            for (Movie movie : movies) {
+                System.out.println(movie);
+            }
     }
 
     private void searchrating()
