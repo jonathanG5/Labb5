@@ -16,7 +16,7 @@ public class databasetxt {
             }
 
         } catch (IOException e) {
-            e.printStackTrace(); // fångar felet, pogrammet kraschar inte
+            e.printStackTrace(); // fångar felet, pogrammet kraschar inte, ändra stacktrace
         }
     }
 

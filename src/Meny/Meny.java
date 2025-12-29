@@ -31,15 +31,18 @@ public class Meny {
             function = scan.nextInt();
             scan.nextLine();
 
-            switch(function) {
+            switch(function) { // fixa deafult case
                 case 1 -> searchtitle();
                 case 2 -> searchrating();
                 case 3 -> addMovie();
+                case 4 -> System.out.println()break;
+                default -> System.out.println("Ogiltigt val, försök igen.");
+
             }
         }
     }
 
-    private void searchtitle()
+    private void searchtitle()// alla filmer kommer upp
     {
         System.out.print("Enter keyword: ");
         String keyword = scan.nextLine();
@@ -65,9 +68,12 @@ public class Meny {
 
     private void addMovie()
     {
-        System.out.println("Title: ");
-        String title = scan.nextLine();
+        String title = "";
 
+        while (title.isEmpty()) {
+            System.out.print("Title: ");
+            title = scan.nextLine();
+        }
         System.out.println("Review score (1-5): ");
         int rating = scan.nextInt();
         database.addMovie(new Movie(title,rating));
