@@ -35,7 +35,7 @@ public class Meny {
                 case 1 -> searchtitle();
                 case 2 -> searchrating();
                 case 3 -> addMovie();
-                case 4 -> System.out.println()break;
+                case 4 -> System.out.println("Program turning off");
                 default -> System.out.println("Ogiltigt val, försök igen.");
 
             }
